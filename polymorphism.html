@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+// Polymorphism ==> Redifining a method inside a child class of a parent.
+
+class Animal{
+
+constructor(name){
+
+    this.name = name;
+}
+
+    makeSound(){
+        console.log('Generic animal sound');
+    }
+}
+
+class Dog extends Animal{
+    constructor(name){
+        super(name);
+
+    }
+
+    makeSound(){
+        console.log('Woof Woof');
+    }
+}
+
+const a1 = new Animal('Bark');
+a1.makeSound();
+
+const a2 = new Dog('Jeff');
+ a2.makeSound();
+</script>
+</html>

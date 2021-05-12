@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+// Parent and Child class
+
+class Person{
+
+    constructor(name,age){
+        this.age = age;
+        this.name = name;
+
+    }
+    
+    describe(){
+        console.log(`I am a programmer named ${this.name} aged ${this.age}`);
+    }
+    
+}
+
+// this will take up all the attributes of the parent class
+// as well as the describe method.
+
+class Programmer extends Person{
+
+    constructor(name,age,yearsOfExperience){
+
+        // we have to call the parent contructor using the super method
+        
+        super(name,age);
+
+        // custome behaviour of the programmer
+
+        this.yearsOfExperience = yearsOfExperience;
+    
+    }
+    code(){
+        console.log(`${this.name} is programming`);
+    }
+}
+
+// let person1 = new Person('Solomon', 23);
+// let programmer1 = new Programmer('Daniel', 25,1);
+
+const programmers = [
+    new Programmer('Rock',13,1),
+    new Programmer('Wadia',22,4)
+
+];
+
+// console.log(person1);
+// console.log(programmer1.code());
+
+
+function developerSoftware(programmers){
+        // develop software
+    
+       for(let programmer of programmers){
+           programmer.code();
+        //    console.log()
+       } 
+        
+}
+
+developerSoftware(programmers);
+
+</script>
+</html>

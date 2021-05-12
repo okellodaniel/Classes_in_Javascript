@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /*
+    
+    Getters and setters are used to define methods on a class which are 
+    then used as though they are properties      
+    */
+
+    // Getter
+    class Square {
+        constructor(_width){
+
+            this.width = _width;
+            this.height = _width;
+            
+            //Number of requests for area (in the getter);
+            this.numberOfRequestForArea = 0; 
+
+        }
+
+        // Getter
+        get area(){
+
+            return this.width * this.height;
+
+        }
+
+        // Setter
+
+        set area(area){
+            this.width = math.sqrt(area);
+            this.height = this.width;
+        }
+    }
+
+    let square1 = new Square(25);
+
+    console.log(square1.area);
+
+// Setter
+
+square1.area = 25;
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script type="text/javascript">
+/*
+Class ==> Used to create one or more classes
+Objects ==> A creation from a class definition. {They are used by the program to achieve different things} 
+Class => Objects
+
+Instance Properties : What they have {Basically data about the object}
+    - Name
+    -Age
+    -Height
+Instance Method {What actions and behaviour} ==> Use instance properties to achieve results
+    -talk
+    -run 
+    -jump
+*/
+
+/* class Rectange{ this is your class definition
+    within this class is a constructor, a method which is run 
+    once in the lifetime of a class.
+    constructor is used to setup your object
+
+    this. ==> refers to the current object. { Object being created by that class}
+
+    place methods outside the constructor method 
+}*/
+
+class Rectangle{
+    constructor(width,height,color){
+        console.log('the rectangle is being created');
+
+        this.width = width;
+        this.height = height;
+        this.color = color;
+
+    }
+    // Methods
+
+    getArea(){
+        return this.width * this.height;
+    }
+
+    printDesscrition(){
+        console.log(`I am a rectangle of ${this.color}`);
+    }
+}
+
+let myRectangle1 = new Rectangle(10,6,'yellow');
+let myRectangle2 = new Rectangle(5,2,'black'); 
+
+
+console.log(myRectangle1.getArea()); // This calls the instance method.
+console.log(myRectangle1.printDesscrition());
+
+
+</script>
